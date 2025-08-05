@@ -33,7 +33,7 @@ jobs:
     - name: Run tests
       run: |
         cd sistemas/web
-        npm test -- --watchAll=false --coverage
+        ./test-ci.sh
     
     - name: Run linting
       run: |
