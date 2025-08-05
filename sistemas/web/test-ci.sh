@@ -14,7 +14,7 @@ if [ ! -f "package.json" ]; then
 fi
 
 # Verificar se o diretório src existe
-if [ ! -d "src" ]; then
+if [ ! -d "./src" ]; then
     echo "❌ Diretório src não encontrado"
     exit 1
 fi
