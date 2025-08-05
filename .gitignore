@@ -1,0 +1,14 @@
+node_modules/
+dist
+build/
+public/
+src/
+test/
+docs/
+examples/
+scripts/
+config/
+logs/
+
+*.mp4
+gcp-sa-key-production.json

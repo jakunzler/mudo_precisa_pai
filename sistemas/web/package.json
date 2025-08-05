@@ -1,0 +1,69 @@
+{
+  "name": "mundo-precisa-pai-web",
+  "version": "1.0.0",
+  "description": "Frontend para o movimento 'O Mundo Precisa de um Pai'",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1",
+    "react-scripts": "5.0.1",
+    "styled-components": "^6.1.1",
+    "framer-motion": "^10.16.5",
+    "react-icons": "^4.12.0",
+    "react-intersection-observer": "^9.5.3",
+    "react-helmet-async": "^1.3.0",
+    "axios": "^1.6.2",
+    "react-hook-form": "^7.48.2",
+    "react-hot-toast": "^2.4.1",
+    "lucide-react": "^0.294.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md}",
+    "docker:build": "docker build -t mundo-precisa-pai:latest .",
+    "docker:run": "docker run -p 8080:80 mundo-precisa-pai:latest",
+    "deploy:local": "bash deploy-local.sh",
+    "docker:start": "bash docker-utils.sh start",
+    "docker:stop": "bash docker-utils.sh stop",
+    "docker:restart": "bash docker-utils.sh restart",
+    "docker:logs": "bash docker-utils.sh logs",
+    "docker:status": "bash docker-utils.sh status",
+    "docker:clean": "bash docker-utils.sh clean",
+    "docker:info": "bash docker-utils.sh info",
+    "analyze": "npm run build && npx serve -s build -l 3000"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0"
+  }
+} 
