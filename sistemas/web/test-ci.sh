@@ -13,13 +13,15 @@ if [ ! -f "package.json" ]; then
     exit 1
 fi
 
+echo "📁 Diretório atual: $(pwd)"
+echo "🔍 Lista diretórios existentes:"
+ls -la
+
 # Verificar se o diretório src existe
-if [ ! -d "./src" ]; then
+if [ ! -d "src" ]; then
     echo "❌ Diretório src não encontrado"
     exit 1
 fi
-
-echo "📁 Diretório atual: $(pwd)"
 
 # Instalar dependências apenas se node_modules não existir
 if [ ! -d "node_modules" ]; then
