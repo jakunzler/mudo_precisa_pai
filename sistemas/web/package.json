@@ -60,6 +60,11 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
+  },
   "devDependencies": {
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
