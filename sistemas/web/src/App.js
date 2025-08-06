@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Sponsorship from './pages/Sponsorship';
 import Cowork from './pages/Cowork';
+import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
           <Route path="/cowork" element={<Cowork />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       

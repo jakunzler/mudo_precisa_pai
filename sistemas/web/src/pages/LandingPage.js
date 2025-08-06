@@ -13,7 +13,7 @@ const LandingContainer = styled.div`
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding-top: 0;
+  padding: 2rem 1rem;
   margin-top: 0;
 
   &::before {
@@ -26,6 +26,14 @@ const LandingContainer = styled.div`
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
     opacity: 0.3;
   }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0.75rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem 0.5rem;
+  }
 `;
 
 const Content = styled.div`
@@ -37,34 +45,48 @@ const Content = styled.div`
   position: relative;
   z-index: 2;
   margin-top: 0;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem 0.5rem;
+  }
 `;
 
 const HeroTitle = styled(motion.h1)`
-  font-size: 4rem;
+  font-size: clamp(2rem, 8vw, 4rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   @media (max-width: 480px) {
-    font-size: 2rem;
+    margin-bottom: 0.75rem;
   }
 `;
 
 const HeroSubtitle = styled(motion.p)`
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   margin-bottom: 2rem;
   opacity: 0.9;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.6;
 
   @media (max-width: 768px) {
-    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 1rem;
   }
 `;
 
@@ -74,35 +96,53 @@ const CTAButton = styled(motion(Link))`
   gap: 0.5rem;
   background: white;
   color: #1E3A8A;
-  padding: 1rem 2rem;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   transition: all 0.3s ease;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
 
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
     color: #059669;
   }
+
+  @media (max-width: 480px) {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
 `;
 
 const StatsContainer = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 4rem;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-top: clamp(2rem, 6vw, 4rem);
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
 `;
 
 const StatCard = styled.div`
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  padding: 2rem;
+  padding: clamp(1rem, 3vw, 2rem);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
@@ -113,21 +153,26 @@ const StatCard = styled.div`
   }
 
   svg {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 1rem;
+    width: clamp(32px, 6vw, 48px);
+    height: clamp(32px, 6vw, 48px);
+    margin-bottom: 0.75rem;
     color: #EA580C;
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: clamp(1.25rem, 4vw, 2rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
   }
 
   p {
-    font-size: 1rem;
+    font-size: clamp(0.75rem, 2vw, 1rem);
     opacity: 0.9;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem 0.75rem;
   }
 `;
 
@@ -143,11 +188,15 @@ const FloatingElements = styled.div`
 
 const FloatingElement = styled(motion.div)`
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: clamp(50px, 10vw, 100px);
+  height: clamp(50px, 10vw, 100px);
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   backdrop-filter: blur(5px);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const LandingPage = () => {
