@@ -14,6 +14,7 @@ import Events from './pages/Events';
 import Mentoring from './pages/Mentoring';
 import Community from './pages/Community';
 import ScrollToTop from './components/ScrollToTop';
+import FloatingContributionButton from './components/FloatingContributionButton';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
       </main>
       
       <Footer />
+      <FloatingContributionButton />
     </>
   );
 }

@@ -3,16 +3,15 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import {
-  ArrowRightIcon,
-  Heart,
-  Users,
-  Target,
-  AwardIcon,
-  BookOpen,
+import { 
+  Heart, 
+  Users, 
+  Target, 
+  ArrowRight,
   Baby,
+  Award,
+  BookOpen
 } from 'lucide-react';
-
 
 const LandingContainer = styled.div`
   min-height: 100vh;
@@ -226,7 +225,7 @@ const LandingPage = () => {
       label: 'Eventos Realizados'
     },
     {
-      icon: AwardIcon,
+      icon: Award,
       number: '95%',
       label: 'Satisfação'
     },
@@ -317,7 +316,7 @@ const LandingPage = () => {
             whileTap={{ scale: 0.95 }}
           >
             Conheça o Movimento
-            <ArrowRightIcon size={20} />
+            <ArrowRight size={20} />
           </CTAButton>
 
           <StatsContainer

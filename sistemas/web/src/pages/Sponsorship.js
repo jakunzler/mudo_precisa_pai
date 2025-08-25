@@ -12,6 +12,7 @@ import {
   Target,
   CheckCircleIcon
 } from 'lucide-react';
+import PixContributionWidget from '../components/PixContributionWidget';
 
 const SponsorshipContainer = styled.div`
   padding-top: 0;
@@ -448,6 +449,31 @@ const Sponsorship = () => {
               </PlanCard>
             ))}
           </PlansGrid>
+        </Section>
+
+        <Section>
+          <SectionTitle
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Contribua com PIX
+          </SectionTitle>
+          <SectionSubtitle
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Faça sua contribuição de forma rápida e segura através do PIX
+          </SectionSubtitle>
+          
+          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+            <PixContributionWidget 
+              title="Contribua com PIX"
+              subtitle="Ajude-nos a transformar a paternidade no Brasil"
+              showImage={true}
+            />
+          </div>
         </Section>
 
         <BenefitsSection>

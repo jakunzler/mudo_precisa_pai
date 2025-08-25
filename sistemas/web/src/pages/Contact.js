@@ -2,7 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock
+} from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const ContactContainer = styled.div`

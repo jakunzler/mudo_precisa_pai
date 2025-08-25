@@ -6,14 +6,11 @@ import { useInView } from 'react-intersection-observer';
 import { 
   Heart, 
   Users, 
-  BookOpen, 
   Target, 
-  ArrowRightIcon,
-  CalendarIcon,
-  MapPinIcon,
-  ClockIcon,
+  BookOpen, 
+  ArrowRight,
   Baby,
-  Brain,
+  Brain
 } from 'lucide-react';
 
 const HomeContainer = styled.div`
@@ -309,7 +306,7 @@ const Home = () => {
             onClick={() => window.location.href = '/sponsorship'}
           >
             Participe Agora
-            <ArrowRightIcon size={20} />
+            <ArrowRight size={20} />
           </CTAButton>
         </HeroSection>
 
@@ -407,17 +404,17 @@ const Home = () => {
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               >
                 <EventImage>
-                  <CalendarIcon />
+                  <BookOpen size={24} />
                 </EventImage>
                 <EventContent>
                   <h3>{event.title}</h3>
                   <p>{event.description}</p>
                   <EventMeta>
-                    <CalendarIcon size={16} />
+                    <BookOpen size={16} />
                     <span>{event.date}</span>
                   </EventMeta>
                   <EventMeta>
-                    <MapPinIcon size={16} />
+                    <Target size={16} />
                     {event.location.includes('http') ? (
                       <a href={event.location} target="_blank" rel="noopener noreferrer">
                         <span>Link</span>
@@ -427,7 +424,7 @@ const Home = () => {
                     )}
                   </EventMeta>
                   <EventMeta>
-                    <ClockIcon size={16} />
+                    <Heart size={16} />
                     <span>{event.time}</span>
                   </EventMeta>
                 </EventContent>
