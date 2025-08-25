@@ -202,13 +202,13 @@ const ContactPage = () => {
     {
       icon: Phone,
       label: 'Telefone',
-      value: '+55 (11) 99999-9999',
-      link: 'tel:+5511999999999'
+      value: '+55 (62) 999870-0425',
+      link: 'tel:+55629998700425'
     },
     {
       icon: MapPin,
       label: 'Endereço',
-      value: 'São Paulo, SP - Brasil',
+      value: 'Goiânia, GO - Brasil',
       link: null
     },
     {
@@ -296,7 +296,7 @@ const ContactPage = () => {
                   <MapPin size={48} style={{ marginBottom: '1rem', color: '#9CA3AF' }} />
                   <p>Mapa será adicionado aqui</p>
                   <p style={{ fontSize: '0.875rem', marginTop: '0.5rem' }}>
-                    São Paulo, SP - Brasil
+                    Goiânia, GO - Brasil
                   </p>
                 </div>
               </MapPlaceholder>

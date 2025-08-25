@@ -203,19 +203,19 @@ const Footer = () => {
             para serem presentes, responsáveis e amorosos.
           </p>
           <SocialLinks>
-            <SocialLink href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <SocialLink href="https://www.facebook.com/profile.php?id=61579395914994&locale=pt_BR" target="_blank" rel="noopener noreferrer">
               <FacebookIcon />
             </SocialLink>
-            <SocialLink href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <SocialLink href="https://www.instagram.com/decarvalhopai7/" target="_blank" rel="noopener noreferrer">
               <InstagramIcon />
             </SocialLink>
-            <SocialLink href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <SocialLink href="https://x.com/decarvalhopai7" target="_blank" rel="noopener noreferrer">
               <TwitterIcon />
             </SocialLink>
-            <SocialLink href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <SocialLink href="https://www.youtube.com/@decarvalhopai7" target="_blank" rel="noopener noreferrer">
               <YoutubeIcon />
             </SocialLink>
-            <SocialLink href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <SocialLink href="https://www.linkedin.com/in/ailton-de-carvalho-6b0691380/" target="_blank" rel="noopener noreferrer">
               <LinkedinIcon />
             </SocialLink>
           </SocialLinks>
@@ -235,10 +235,10 @@ const Footer = () => {
         <FooterSection>
           <h3>Recursos</h3>
           <FooterLinks>
-            <li><Link to="/bibliografia">Bibliografia</Link></li>
-            <li><Link to="/eventos">Eventos</Link></li>
-            <li><Link to="/mentoria">Mentoria</Link></li>
-            <li><Link to="/comunidade">Comunidade</Link></li>
+            <li><Link to="/bibliography">Bibliografia</Link></li>
+            <li><Link to="/events">Eventos</Link></li>
+            <li><Link to="/mentoring">Mentoria</Link></li>
+            <li><Link to="/community">Comunidade</Link></li>
           </FooterLinks>
         </FooterSection>
 
@@ -250,11 +250,11 @@ const Footer = () => {
           </ContactInfo>
           <ContactInfo>
             <PhoneIcon />
-            <span>+55 (11) 99999-9999</span>
+            <span>+55 (62) 999870-0425</span>
           </ContactInfo>
           <ContactInfo>
             <MapPinIcon />
-            <span>São Paulo, SP - Brasil</span>
+            <span>Goiânia, GO - Brasil</span>
           </ContactInfo>
         </FooterSection>
       </FooterContent>

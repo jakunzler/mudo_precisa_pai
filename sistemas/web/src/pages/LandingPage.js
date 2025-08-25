@@ -3,7 +3,16 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { ArrowRightIcon, Heart, Users, Target, AwardIcon } from 'lucide-react';
+import {
+  ArrowRightIcon,
+  Heart,
+  Users,
+  Target,
+  AwardIcon,
+  BookOpen,
+  Baby,
+} from 'lucide-react';
+
 
 const LandingContainer = styled.div`
   min-height: 100vh;
@@ -220,6 +229,16 @@ const LandingPage = () => {
       icon: AwardIcon,
       number: '95%',
       label: 'Satisfação'
+    },
+    {
+      icon: BookOpen,
+      number: '2+',
+      label: 'Livros Publicados'
+    },
+    {
+      icon: Baby,
+      number: '100+',
+      label: 'Famílias Atendidas'
     }
   ];
 

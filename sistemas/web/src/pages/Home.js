@@ -12,6 +12,8 @@ import {
   CalendarIcon,
   MapPinIcon,
   ClockIcon,
+  Baby,
+  Brain,
 } from 'lucide-react';
 
 const HomeContainer = styled.div`
@@ -231,6 +233,16 @@ const Home = () => {
       icon: Target,
       title: 'Impacto Social',
       description: 'Trabalhamos para transformar a realidade das famílias brasileiras.'
+    },
+    {
+      icon: Baby,
+      title: 'Famílias Atendidas',
+      description: 'Atendemos famílias em todo o Brasil.'
+    },
+    {
+      icon: Brain,
+      title: 'Atendimento Psicossocial',
+      description: 'Oferecemos atendimento psicossocial para pais e famílias.'
     }
   ];
 
@@ -243,26 +255,26 @@ const Home = () => {
 
   const events = [
     {
-      title: 'Workshop: Paternidade Ativa',
+      title: 'O Mundo Precisa de Um Pai',
       description: 'Aprenda técnicas práticas para ser um pai mais presente e responsável.',
-      date: '15 Dez 2024',
-      location: 'São Paulo, SP',
-      time: '14:00 - 17:00'
-    },
-    {
-      title: 'Encontro: Pais Solteiros',
-      description: 'Grupo de apoio e troca de experiências para pais solteiros.',
-      date: '20 Dez 2024',
-      location: 'Online',
+      date: '16 e 17 de Agosto de 2025',
+      location: 'Igreja Cristã Evangélica Boas Novas - Taguatinga DF',
       time: '19:00 - 21:00'
     },
     {
       title: 'Palestra: Educação Paterna',
-      description: 'Como educar filhos com amor, limites e responsabilidade.',
-      date: '25 Dez 2024',
-      location: 'Rio de Janeiro, RJ',
-      time: '15:00 - 18:00'
-    }
+      description: 'Porque nos resta então reunir o que de mais perdão, amor e graça, encontrados nos atributos do Pai Celestial. ',
+      date: '17 de Agosto de 2025',
+      location: 'https://www.youtube.com/watch?v=xoXiorwVoJg',
+      time: '10:00 e 19:00'
+    },
+    {
+      title: 'Cuidando de Quem Cuida',
+      description: 'Os padrões de relacionamento atuais tem raízes nas primeiras experiências de afeto da vida.',
+      date: '13 de Setembro de 2025',
+      location: 'Edifício London Eye',
+      time: '8:00 - 18:00'
+    },
   ];
 
   return (
@@ -294,6 +306,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => window.location.href = '/sponsorship'}
           >
             Participe Agora
             <ArrowRightIcon size={20} />
@@ -371,7 +384,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Próximos Eventos
+            Nossos Eventos
           </SectionTitle>
           <SectionSubtitle
             initial={{ opacity: 0, y: 30 }}
@@ -405,7 +418,13 @@ const Home = () => {
                   </EventMeta>
                   <EventMeta>
                     <MapPinIcon size={16} />
-                    <span>{event.location}</span>
+                    {event.location.includes('http') ? (
+                      <a href={event.location} target="_blank" rel="noopener noreferrer">
+                        <span>Link</span>
+                      </a>
+                    ) : (
+                      <span>{event.location}</span>
+                    )}
                   </EventMeta>
                   <EventMeta>
                     <ClockIcon size={16} />

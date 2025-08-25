@@ -301,7 +301,7 @@ const About = () => {
     },
     {
       icon: Shield,
-      title: 'Responsabilidade',
+      title: 'Responsa-bilidade',
       description: 'Promovemos a responsabilidade paterna como pilar fundamental da família.'
     },
     {

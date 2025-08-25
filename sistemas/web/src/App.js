@@ -9,6 +9,10 @@ import About from './pages/About';
 import Sponsorship from './pages/Sponsorship';
 import Cowork from './pages/Cowork';
 import Contact from './pages/Contact';
+import Bibliography from './pages/Bibliography';
+import Events from './pages/Events';
+import Mentoring from './pages/Mentoring';
+import Community from './pages/Community';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -32,6 +36,10 @@ function App() {
           <Route path="/sponsorship" element={<Sponsorship />} />
           <Route path="/cowork" element={<Cowork />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/bibliography" element={<Bibliography />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/mentoring" element={<Mentoring />} />
+          <Route path="/community" element={<Community />} />
         </Routes>
       </main>
       
